@@ -5,6 +5,7 @@
 #include "OilInLitre.h"
 
 Oil OilInLitre::buyOil(double price, double quantityInLitre) {
+    clog << "ADAPTEE |"<< endl;
     cout << "Purchasing " << quantityInLitre << " litres of Oil" << endl;
     Oil oil {price, quantityInLitre};
     return oil;

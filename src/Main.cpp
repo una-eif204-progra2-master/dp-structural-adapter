@@ -20,11 +20,13 @@ int main() {
 
     int PRICE_LITER = 2; // 2$ Per liter
 
+    clog << "CLIENT     >   TARGET (IOilInGallon)" << endl;
     cout << "Implementation with [Class Adapter]" << endl;
     IOilInGallon *adapterClassInterface = new OilInGallonClassAdapter;
     adapterClassInterface->buyOilInGallon(PRICE_LITER, 1);
     adapterClassInterface->buyOilInGallon(PRICE_LITER, 10);
 
+    clog << "CLIENT     >   TARGET (IOilInGallon)" << endl;
     cout << endl << "Implementation with [Object Adapter] (Preferred Way)" << endl;
     IOilInGallon *adapterObjectInterface = new OilInGallonObjectAdapter;
     adapterObjectInterface->buyOilInGallon(PRICE_LITER, 1);

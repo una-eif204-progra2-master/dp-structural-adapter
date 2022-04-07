@@ -5,6 +5,7 @@
 #include "OilInGallonObjectAdapter.h"
 
 Oil OilInGallonObjectAdapter::buyOilInGallon(double price, double quantityInGallon) {
+    clog << "ADAPTER    >   ";
     double quantityInLitre = convertGallonToLitre(quantityInGallon);
     return oilInLiter->buyOil(price, quantityInLitre);
 }
