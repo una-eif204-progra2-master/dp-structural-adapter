@@ -1,4 +1,4 @@
-# Design Pattern: Creation - Singleton
+# Design Pattern: Structural - Adapter
 Base template for repositories of C++
 Consider a scenario where the client is running an oil import business. The Client system is designed to work with the imperial system, which only understand Oil quantity in Gallons. The client wants the functionality to purchase oil from the traders.
 
