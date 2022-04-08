@@ -10,6 +10,11 @@ Oil::~Oil() {
 
 }
 
+Oil::Oil(double price, double quantityInLiter) : price(price), quantityInLiter(quantityInLiter) {
+    double totalPrice = price * quantityInLiter;
+    cout << "Total Cost of purchase is " << totalPrice << " dollars. Purchase Complete." << endl << endl;
+}
+
 double Oil::getPrice() const {
     return price;
 }
@@ -18,20 +23,15 @@ void Oil::setPrice(double price) {
     Oil::price = price;
 }
 
-double Oil::getQuantityInLitre() const {
-    return quantityInLitre;
+double Oil::getQuantityInLiter() const {
+    return quantityInLiter;
 }
 
-void Oil::setQuantityInLitre(double quantityInLitre) {
-    Oil::quantityInLitre = quantityInLitre;
+void Oil::setQuantityInLiter(double quantityInLiter) {
+    Oil::quantityInLiter = quantityInLiter;
 }
 
-std::ostream &operator<<(std::ostream &os, const Oil &oil) {
-    os << "price: " << oil.price << " quantityInLitre: " << oil.quantityInLitre;
+ostream &operator<<(ostream &os, const Oil &oil) {
+    os << "price: " << oil.price << " quantityInLiter: " << oil.quantityInLiter;
     return os;
-}
-
-Oil::Oil(double price, double quantityInLitre) : price(price), quantityInLitre(quantityInLitre) {
-    double totalPrice = price * quantityInLitre;
-    cout << "Total Cost of purchase is " << totalPrice << " dollars. Purchase Complete." << endl << endl;
 }

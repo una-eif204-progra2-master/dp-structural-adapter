@@ -14,11 +14,11 @@ using namespace std;
 class Oil {
 private:
     double price;
-    double quantityInLitre;
+    double quantityInLiter;
 public:
     Oil();
 
-    Oil(double price, double quantityInLitre);
+    Oil(double price, double quantityInLiter);
 
     virtual ~Oil();
 
@@ -26,11 +26,11 @@ public:
 
     void setPrice(double price);
 
-    double getQuantityInLitre() const;
+    double getQuantityInLiter() const;
 
-    void setQuantityInLitre(double quantityInLitre);
+    void setQuantityInLiter(double quantityInLiter);
 
-    friend std::ostream &operator<<(std::ostream &os, const Oil &oil);
+    friend ostream &operator<<(ostream &os, const Oil &oil);
 };
 
 
